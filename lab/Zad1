@@ -1,0 +1,24 @@
+#include <utility>
+#include <string>
+#include <array>
+#include <memory>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+unique_ptr<TinyUrlCodec> Init();
+string random(int len)
+{
+	string a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	string r;
+	srand(time(NULL));
+	for(int i = 0; i < len; i++) r.push_back(a.at(size_t(rand() % 62)));
+	return r;
+}
+void NextHash(arrray<char, 6> *state){
+    for (auto v : NextHash) {
+  v=random(1);
+}
+}
+
+tring Encode(const string &url, unique_ptr<TinyUrlCodec> *codec);
+string Decode(const unique_ptr<TinyUrlCodec> &codec, const string &hash);
